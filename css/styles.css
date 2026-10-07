@@ -95,6 +95,37 @@ main a:not(.btn):hover { text-decoration-thickness: 2px; }
 }
 .skip-link:focus { top: 0; color: #fff; --tnrn-focus: var(--tnrn-gold); }
 
+/* ---------- Draft status banner (remove at launch) ----------
+   deep teal on gold 8.86:1; white on #7a1f12 ~11:1 */
+.draft-banner {
+  background: var(--tnrn-gold);
+  color: var(--tnrn-teal-deep);
+  font-size: 1rem;
+  line-height: 1.45;
+  border-bottom: 1px solid #d9a24a;
+}
+.draft-banner .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem .75rem;
+  padding-top: .55rem;
+  padding-bottom: .55rem;
+}
+.draft-banner .draft-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #7a1f12;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .12em;
+  font-size: .85rem;
+  padding: .2rem .6rem;
+  border-radius: .3rem;
+}
+.draft-banner p { margin: 0; }
+
 /* ---------- Header / nav ---------- */
 .site-header {
   position: relative;

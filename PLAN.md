@@ -3,6 +3,8 @@
 Static, multi-page Bootstrap 5.3 website for the Tribal Nations Research Network.
 Sources: `TNRN.docx`, `TNRNetwork.pdf`, images in `assets/`. Target: WCAG 2.2 Level AA.
 
+**Repository:** https://github.com/ui-iids/tnrn-digital-hub (branch `main`)
+
 ## Decisions (2026-10-06)
 - Static multi-page HTML + Bootstrap 5.3 (CDN) + Bootstrap Icons. No server required.
 - Missing copy: short draft text written and marked with `data-draft` + `<!-- DRAFT -->` comments.
@@ -34,6 +36,12 @@ Local preview: `python3 -m http.server 8765` (also defined in `.claude/launch.js
 - [x] Accessibility verification: axe-core (WCAG 2.0/2.1/2.2 A+AA) shows 0 violations on all pages at 1280px and 375px;
       no horizontal scroll at 320px; targets ≥24px; skip link; visible focus; header is sticky only on wide screens (2.4.11);
       mobile menu closes with Escape; reduced-motion and forced-colors supported
+- [x] 2026-10-06: GitHub repo created and initial commit pushed (`f1ee4df`)
+- [x] 2026-10-06: Site live at https://ui-iids.github.io/tnrn-digital-hub/ ; `noindex, nofollow` robots meta added to all pages
+      to keep drafts out of search engines. **Remove it from every page before public launch.**
+- [x] 2026-10-06: Site-wide "DRAFT" status banner added above the header on all pages (`.draft-banner` in css/styles.css).
+      **Remove the banner `<section>` from every page and its CSS before public launch.**
+- [ ] Decide on access control (private Pages / Cloudflare Access / StatiCrypt / UI server) during review
 - [ ] TNRN review of all draft copy (`?review` mode)
 - [ ] Real contact details (footer; the PDF had Canva placeholder text)
 - [ ] Protocol page URLs for each Tribe/institution (`protocols.html`)
