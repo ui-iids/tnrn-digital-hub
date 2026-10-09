@@ -48,6 +48,25 @@ Local preview: `python3 -m http.server 8765` (also defined in `.claude/launch.js
       axe shows 0 violations (WCAG 2.2 AA) at 1280px and 375px, standalone and embedded.
 - [x] 2026-10-06: Pinpoint embed (`pinpoint.nkn.uidaho.edu/embed.js`, project `EN5sGA_bUls0IUqB`) added before `</body>`
       on all 7 hub pages (not promo/). It is disabled on localhost ("site is not registered"), so it only runs on the registered domain.
+- [x] 2026-10-09: GRANTED removed from the framework (no longer exists): home goal card removed, SEED Grants renumbered 5→4,
+      framework image alt text now says "four"; GRANTED card removed from `promo/build_promo.py` and promo files regenerated.
+- [x] 2026-10-09: Home nav/footer link "Data Sovereignty" renamed "Indigenous Research" on all 7 pages.
+- [x] 2026-10-09: `tnrn-framework.pptx` created: one-slide editable framework diagram without GRANTED
+      (center hub with the two goals; 1 Researchers, 2 Training System, 3 Inter-Institutional Capacity, 4 SEED Grants;
+      arrows 4↔1, 1→2, 2→3, matching the old image). Description is in the speaker notes. PowerPoint only; the site image is unchanged.
+- [x] 2026-10-09: Home hero image changed from the 6 R's emblem to the TNRN seal. Source `images/tnrn_promo_img.png` (unchanged);
+      web copies `images/tnrn-seal.webp` + `tnrn-seal.png` are cropped to the circle with transparent corners so no pale box
+      shows on the dark hero. New alt text describes the seal.
+- [x] 2026-10-09: Home framework image replaced with `images/tnrn_framework_diagram3.jpg` (+ WebP copy), which has no GRANTED.
+      New alt text describes its 4-part ring (1→2→3→4, plus 4↔1). `tnrn-framework-v2.*` is no longer used.
+- [x] 2026-10-09: Promo one-pagers' hero image changed from the 6 R's emblem to the TNRN seal (`promo/images/tnrn-seal.webp`, 440px,
+      transparent corners); `EMBLEM_ALT` in build_promo.py updated and both promo files regenerated. `promo/images/6rs.webp` is now unused.
+      **Re-send the promo files to the Idaho CREWS web team.**
+- [x] 2026-10-09: Pinpoint embed added to both promo files via `PINPOINT` in build_promo.py (end of body / end of snippet).
+      The snippet's header comment tells the CREWS team the script only runs on registered domains.
+- [ ] Register the Idaho CREWS domain in the Pinpoint project (or have CREWS remove the script from the snippet)
+- [ ] Decide whether the goal-card headings below the diagram should match its labels
+      (diagram: Diverse Research Team / Training & Capacity Building / Inter-Institutional Systems; cards: Researchers / Training System / Inter-Institutional Capacity)
 - [ ] Once Pinpoint is live on ui-iids.github.io, test its widget for keyboard/screen-reader access (WCAG 2.2 AA)
 - [ ] Send promo files to the Idaho CREWS web team; confirm their CMS keeps `<style>` and data-URI images
 - [ ] Decide on access control (private Pages / Cloudflare Access / StatiCrypt / UI server) during review
@@ -58,3 +77,8 @@ Local preview: `python3 -m http.server 8765` (also defined in `.claude/launch.js
 - [ ] Resource links (`resources.html`), Indigenous Scholars highlights, Tribal partnership stories
 - [ ] Manual screen-reader pass (VoiceOver/NVDA) before launch
 - [ ] Confirm logo usage permissions with each partner
+
+## Future sessions
+- [ ] Add light/dark modes to the hub pages, and possibly the promo page. Follow `prefers-color-scheme` by default and
+      offer an accessible toggle that remembers the choice. Define dark values for the `:root` color tokens in css/styles.css
+      and re-check all contrast pairs (WCAG 2.2 AA). Logos need light backing cards in dark mode.
